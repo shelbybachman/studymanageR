@@ -6,7 +6,9 @@
 
 ## main functioms
 
-- `setup_project.R`: creates folder structure for project, R project file, initializes git repo, experimentR-specific json file, OSF project
+- `setup_project.R`: creates folder structure for project, initializes git repo, experimentR-specific json file, OSF project
+
+- *TBA*: user probably has to create R project manually, based on [this](based on this standard: https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
 
 - `create_prereg.R`: creates preregistration draft for project
 
