@@ -42,6 +42,8 @@
 
 - `create_data_dirs()`: creates specification-compliant data directories for public sharing
 
+  - selection version depending on specification (tba)
+
 ### manuscript
 
 - `create_manuscript()`: creates manuscript draft for project
