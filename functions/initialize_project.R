@@ -53,7 +53,7 @@ initialize_project <- function(study_name, home_dir, verbose = TRUE) {
     study_name = study_name,
     root_dir = file.path(home_dir, study_name)
   )
-  project_info <- rjson::toJSON(project_info)
+  project_info <- jsonlite::toJSON(project_info)
   write(project_info, file.path(home_dir, study_name, paste(study_name, '_info.json', sep = '')))
   if (verbose == TRUE) {
     message(paste('saved project metadata: ', study_name, '/', study_name, '_info.json', ' ...', sep = ''))
