@@ -12,7 +12,7 @@
 
 - `create_prereg.R`: creates preregistration draft for project
 
-- `upload_prereg.R`: uploads preregistration draft to OSF
+- `upload_prereg.R`: creates OSF project & uploads preregistration draft to OSF
 
 - `format_results.R`: takes results files & converts to bids format
 
@@ -26,5 +26,4 @@
 
 - `here`
 - `rjson`
-
-
+- `osfr`

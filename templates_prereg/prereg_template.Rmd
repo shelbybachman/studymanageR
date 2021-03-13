@@ -1,0 +1,99 @@
+---
+output: word_document
+bibliography: refs.bib
+csl: apa7.csl
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## Study Information
+
+1. Title: 
+
+*Details*: Title is required. Provide the working title of your study. It may be the same title that you submit for publication of your final manuscript, but it is not a requirement. The title should be a specific and informative description of a project. Vague titles such as 'Fruit fly preregistration plan' are not appropriate. 
+
+*Example*: Effect of sugar on brownie tastiness
+
+2. Authors: 
+
+*Details*: Author list is required.
+
+3. Description: 
+
+*Details*: Please give a brief description of your study, including some background, the purpose of the study, or broad research questions.
+
+*Example*: Though there is strong evidence to suggest that sugar affects taste preferences, the effect has never been demonstrated in brownies. Therefore, we will measure taste preference for four different levels of sugar concentration in a standard brownie recipe to determine if the effect exists in this pastry. 
+
+*Example, with citation*: Use `Addins` --> `citr` --> `Insert citations` to add a citation. Brackets enclose a citation in parentheses [@cruwell_7_2018]. You can also add text within parentheses [see @open_science_collaboration_estimating_2015].
+
+4. Hypotheses: 
+
+*Details*: List specific, concise, and testable hypotheses. Please state if the hypotheses are directional or non-directional. If directional, state the direction. A predicted effect is also appropriate here. If a specific interaction or moderation is important to your research, you can list that as a separate hypothesis. 
+
+*Example*: If taste affects preference, then mean preference indices will be higher with higher concentrations of sugar.
+
+
+## Design Plan
+
+5. Study type
+
+6. Blinding
+
+7. Is there any additional blinding in this study?
+
+8. Study design
+
+9. Randomization
+
+
+## Sampling Plan
+
+10. Existing data
+
+11. Explanation of existing data
+
+12. Data collection procedures
+
+13. Sample size
+
+14. Sample size rationale
+
+15. Stopping rule
+
+
+## Variables
+
+16. Manipulated variables
+
+17. Measured variables
+
+18. Indices
+
+
+## Analysis Plan
+
+19. Statistical models
+
+20. Transformations
+
+21. Inference criteria
+
+22. Data exclusion
+
+23. Missing data
+
+24. Exploratory analysis
+
+
+## Other
+
+25. Other
+
+*Details*: If there is any additional information that you feel needs to be included in your preregistration, please enter it here. Literature cited, disclosures of any related work such as replications or work that uses the same data, or other context that will be helpful for future readers would be appropriate here. 
+
+
+## References
