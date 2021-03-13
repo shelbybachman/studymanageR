@@ -6,10 +6,6 @@
 
 ## main functioms
 
-- `setup_project.R`: creates directory structure for project and project-specific metadata file
-
-  - user probably has to create R project manually, based on [this](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) standard
-
 - `create_prereg.R`: creates pre-registration draft for project
 
   - user can choose between standard, AsPredicted, or replication pre-registration templates
@@ -17,6 +13,10 @@
   - instructions should specify how to push pre-registration draft to Google Drive for collaborator input
 
 - `upload_prereg.R`: creates OSF project & uploads preregistration draft to OSF
+
+- `setup_project.R`: creates directory structure for project and project-specific metadata file
+
+  - user probably has to create R project manually, based on [this](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) standard
 
 - `format_results.R`: takes results files & converts to bids format
 
