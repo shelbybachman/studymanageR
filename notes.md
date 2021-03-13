@@ -2,13 +2,13 @@
 
 ## description
 
-`studymanageR` is a package for experimental research project management and is designed to make it easier and more user-friendly to perform reproducible research
+`studymanageR` is a package for experimental research project management. The goals of `studymanageR` are (a) to facilitate the use of standard file & directory naming conventions and (b) to facilitate open & reproducible research practices.
 
 ## main functioms
 
 - `setup_project.R`: creates directory structure for project and project-specific metadata file
 
-- *TBA*: user probably has to create R project manually, based on [this](based on this standard: https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
+- *TBA*: user probably has to create R project manually, based on [this](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) standard
 
 - `create_prereg.R`: creates preregistration draft for project
 
@@ -25,5 +25,6 @@
 ## dependencies
 
 - `here`
+- `rjson`
 
 
