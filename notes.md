@@ -1,4 +1,4 @@
-# experimentR
+# studymanageR
 
 ## description
 
