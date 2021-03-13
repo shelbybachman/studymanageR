@@ -10,7 +10,7 @@
 
 - `initialize_project()`: creates directory structure for project, project-specific metadata file, and initializes git repository
 
-- RStudio project setup: t this stage, user should create R project manually, ideally with [these](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) specifications
+- RStudio project setup: at this stage, user should create R project manually, ideally with [these](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) specifications
 
 ### literature search
 
@@ -28,6 +28,8 @@
 
 - `create_bib()`: creates a .bib file from selected full-text articles for import into reference manager of choice
 
+### pre-registration
+
 - `create_prereg()`: creates pre-registration draft for project
 
   - user can choose between standard, AsPredicted, or replication pre-registration templates
@@ -36,9 +38,15 @@
 
 - `upload_prereg()`: creates OSF project & uploads preregistration draft to OSF
 
+### after data collection
+
 - `create_data_dirs()`: creates specification-compliant data directories for public sharing
 
+### manuscript
+
 - `create_manuscript()`: creates manuscript draft for project
+
+### share data & code
 
 - `prepare_for_sharing()`: creates standardized dataset descriptor files for public sharing
 
