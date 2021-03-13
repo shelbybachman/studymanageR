@@ -37,3 +37,6 @@
 
 # R Environment Variables
 .Renviron
+
+# testing files
+test_functions.R
