@@ -1,10 +1,12 @@
 ########################################
-# setup_project() initializes a project
+# initialize_project() sets up a project
 # by creating a directory structure
 # and a project-specific metadata file
 # written by shelby bachman
 # last updated 2021-03-13
 ########################################
+
+# tba: initialize git repository via command line
 
 setup_project <- function(study_name, home_dir, 
                           n_sessions = 1,
