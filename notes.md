@@ -8,9 +8,13 @@
 
 - `setup_project.R`: creates directory structure for project and project-specific metadata file
 
-- *TBA*: user probably has to create R project manually, based on [this](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) standard
+  - user probably has to create R project manually, based on [this](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) standard
 
-- `create_prereg.R`: creates preregistration draft for project
+- `create_prereg.R`: creates pre-registration draft for project
+
+  - user can choose between standard, AsPredicted, or replication pre-registration templates
+  - user can specify citation style and whether pre-registration is knitted to `.docx` or `pdf`
+  - instructions should specify how to push pre-registration draft to Google Drive for collaborator input
 
 - `upload_prereg.R`: creates OSF project & uploads preregistration draft to OSF
 
