@@ -8,9 +8,10 @@
 
 ### project setup
 
-- `initialize_project()`: creates directory structure for project, project-specific metadata file, and initializes git repository
+- `initialize_project()`: creates directory structure for project, initializes R project, initializes git repository, creates project-specific metadata file
 
-- RStudio project setup: at this stage, user should create R project manually, ideally with [these](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) specifications
+  - `usethis` options allow user to specify whether project is an RStudio Project or not (regardless, `here` will work after this)
+  - R project could then be manually adjusted to have [these](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) specifications
 
 ### literature search
 
@@ -56,6 +57,8 @@
 
 ## dependencies
 
+- `usethis`
+- git configuration (link TBA)
 - `here`
 - `rjson`
 - `osfr`
