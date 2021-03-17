@@ -3,12 +3,12 @@
 # by creating a directory structure
 # and a project-specific metadata file
 # written by shelby bachman
-# last updated 2021-03-13
+# last updated 2021-03-17
 ########################################
 
-# tba: initialize git repository via command line
-
-initialize_project <- function(study_name, home_dir, verbose = TRUE) {
+initialize_project <- function(study_name, home_dir, 
+                               rstudio_project = TRUE,
+                               verbose = TRUE) {
   
   ###### create project root directory 
   if (dir.exists(file.path(home_dir, study_name))){
@@ -20,7 +20,14 @@ initialize_project <- function(study_name, home_dir, verbose = TRUE) {
     }
   }
   
-  ###### create project subdirectory -- data
+  ###### create R project
+  usethis::create_project(file.path(home_dir, study_name),
+                          rstudio = rstudio_project,
+                          open = FALSE)  # don't open the project in a new session
+  # tba: customize project settings
+  
+  ###### create project subdirectory structure
+  ### /data
   # based on this standard: Wilson et al., https://doi.org/10.1371/journal.pcbi.1005510
   dir.create(file.path(home_dir, study_name, 'data'))
   if (verbose == TRUE) {
@@ -30,19 +37,19 @@ initialize_project <- function(study_name, home_dir, verbose = TRUE) {
   dir.create(file.path(home_dir, study_name, 'data', 'rawdata'))
   dir.create(file.path(home_dir, study_name, 'data', 'sourcedata'))
   
-  ###### create project subdirectory - doc
+  ### /doc
   dir.create(file.path(home_dir, study_name, 'doc'))
   if (verbose == TRUE) {
     message(paste('created doc subdirectory: ', study_name, '/doc', ' ...', sep = ''))
   }
   
-  ###### create project subdirectory - results
+  ### /results
   dir.create(file.path(home_dir, study_name, 'results'))
   if (verbose == TRUE) {
     message(paste('created results subdirectory: ', study_name, '/results', ' ...', sep = ''))
   }
   
-  ###### create project subdirectory - src
+  ### /src
   dir.create(file.path(home_dir, study_name, 'src'))
   if (verbose == TRUE) {
     message(paste('created src subdirectory: ', study_name, '/src', ' ...', sep = ''))
@@ -59,6 +66,10 @@ initialize_project <- function(study_name, home_dir, verbose = TRUE) {
     message(paste('saved project metadata: ', study_name, '/', study_name, '_info.json', ' ...', sep = ''))
   }
   
+  ###### initialize git repository
+  usethis::use_git(message = 'initialize project')
+  
+  ###### final status message
   if (verbose == TRUE) {
     message('all done initializing project!')
   }
