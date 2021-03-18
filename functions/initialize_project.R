@@ -33,15 +33,19 @@ initialize_project <- function(study_name, home_dir,
   if (verbose == TRUE) {
     message(paste('created data subdirectory: ', study_name, '/data', ' ...', sep = ''))
   }
-  dir.create(file.path(home_dir, study_name, 'data', 'derivatives'))
-  dir.create(file.path(home_dir, study_name, 'data', 'rawdata'))
-  dir.create(file.path(home_dir, study_name, 'data', 'sourcedata'))
+  dir.create(file.path(home_dir, study_name, 'data', 'derivatives'))  # directory for derivatives
+  dir.create(file.path(home_dir, study_name, 'data', 'rawdata'))  # directory for shareable data
+  dir.create(file.path(home_dir, study_name, 'data', 'sourcedata'))  # directory for very raw data
   
   ### /doc
   dir.create(file.path(home_dir, study_name, 'doc'))
   if (verbose == TRUE) {
     message(paste('created doc subdirectory: ', study_name, '/doc', ' ...', sep = ''))
   }
+  dir.create(file.path(home_dir, study_name, 'doc', 'literature_search'))  # directory for literature search results
+  dir.create(file.path(home_dir, study_name, 'doc', 'preregistration'))  # directory for pre-registration
+  dir.create(file.path(home_dir, study_name, 'doc', 'manuscript'))  # directory for manuscript
+  dir.create(file.path(home_dir, study_name, 'doc', 'slides'))  # directory for slides
   
   ### /results
   dir.create(file.path(home_dir, study_name, 'results'))
