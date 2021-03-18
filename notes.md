@@ -58,7 +58,9 @@
 ## dependencies
 
 - `usethis`
-- git configuration (link TBA)
+- if version control with git desired, git installed & configured
 - `here`
 - `rjson`
+- `RISmed`
+- `rwos`
 - `osfr`
