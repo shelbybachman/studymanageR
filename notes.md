@@ -8,11 +8,11 @@
 
 ### project setup
 
-- `initialize_project()`: creates directory structure for project, initializes R project, initializes git repository, creates project-specific metadata file
+- `initialize_project()`: creates directory structure for project, initializes R project, initializes git repository, initializes OSF project, creates project-specific metadata file
 
   - `usethis` options allow user to specify whether project is an RStudio Project or not (regardless, `here` will work after this)
   - R project could then be manually adjusted to have [these](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) specifications
-  - TBA: initialize OSF project?
+  - also allows specification of whether to initialize (a) git repository and (b) OSF project
 
 ### literature search
 
@@ -28,9 +28,9 @@
 
 - `create_prereg()`: creates pre-registration draft for project
 
-  - user can choose between standard, AsPredicted, or replication pre-registration templates
-  - user can specify citation style and whether pre-registration is knitted to `.docx` or `pdf`
-  - instructions should specify how to push pre-registration draft to Google Drive for collaborator input
+  - user can choose between OSF template ([link](https://osf.io/preprints/metaarxiv/epgjd/)), AsPredicted ([link](https://osf.io/fnsb6/)), or replication ([link](https://osf.io/4jd46/)) pre-registration templates
+  - user can specify citation style (default = apa7)
+  - instructions should specify how to push knitted .docx pre-registration draft to Google Drive for collaborator input
 
 - `upload_prereg()`: uploads preregistration draft to OSF
 
