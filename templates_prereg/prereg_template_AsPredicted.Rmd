@@ -1,0 +1,56 @@
+---
+title: "Pre-registration"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+bibliography: refs.bib
+csl: apa7.csl
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+**Study title**:
+
+**Authors**:
+
+**Study details**:
+
+1. Have any data been collected for this study already?
+
+    *Details*: Choose one of the following options:
+
+  - Yes, at least some data have been collected for this study already
+  - No, no data have been collected for this study yet
+
+
+2. What's the main question being asked or hypothesis being tested in this study? 
+
+
+3. Describe the key dependent variable(s) specifying how they will be measured. 
+
+
+4. How many and which conditions will participants be assigned to?
+
+
+5. Specify exactly which analyses you will conduct to examine the main 
+question/hypothesis.
+
+
+6. Any secondary analyses?
+
+
+7. How many observations will be collected or what will determine the sample size? No 
+need to justify decision, but be precise about exactly how the number will be determined.
+
+
+8. Anything else you would like to pre-register? (e.g., data exclusions, variables collected 
+for exploratory purposes, unusual analyses planned?)
+
+
+**References**
