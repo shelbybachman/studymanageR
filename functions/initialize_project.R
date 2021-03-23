@@ -88,7 +88,8 @@ initialize_project <- function(project_name,
     rstudio_project = rstudio_project,
     git_repo = git_repo,
     osf_project = osf_project,
-    osf_guid = ifelse(osf_project == TRUE, osf_proj$id, NA)
+    osf_guid = ifelse(osf_project == TRUE, osf_proj$id, NA),
+    osf_url = ifelse(osf_project == TRUE, paste('http://www.osf.io/', osf_proj$id, sep = ''))
   )
   project_info <- jsonlite::toJSON(project_info)
   write(project_info, file.path(home_dir, project_abbrev, paste(project_abbrev, '_info.json', sep = '')))

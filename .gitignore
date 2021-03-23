@@ -40,3 +40,7 @@
 
 # testing files
 test_functions.R
+test_project/
+.Rproj.user
+.Rdata
+.DS_Store
