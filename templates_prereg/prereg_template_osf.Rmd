@@ -1,5 +1,8 @@
 ---
-output: word_document
+title: Pre-registration
+output:
+  pdf_document: default
+  word_document: default
 bibliography: refs.bib
 csl: apa7.csl
 ---
