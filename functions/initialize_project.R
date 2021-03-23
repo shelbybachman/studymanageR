@@ -6,8 +6,13 @@
 # last updated 2021-03-17
 ########################################
 
-initialize_project <- function(study_name, home_dir, 
+initialize_project <- function(study_name, 
+                               study_descrip, 
+                               study_abbrev, 
+                               home_dir, 
                                rstudio_project = TRUE,
+                               git_repo = TRUE,
+                               osf_project = TRUE,
                                verbose = TRUE) {
   
   ###### create project root directory 
@@ -59,20 +64,38 @@ initialize_project <- function(study_name, home_dir,
     message(paste('created src subdirectory: ', study_name, '/src', ' ...', sep = ''))
   }
   
+  ###### initialize git repository
+  if (git_repo == TRUE) {
+    usethis::use_git(message = 'initialize project')    
+  }
+  
+  ###### initialize (private) OSF project
+  if (osf_project == TRUE) {
+    osf_proj <- osf_create_project(
+      title = study_name,
+      description = study_descrip
+    )
+    message(paste('created (private) OSF project! project link: https://www.osf.io/', osf_proj$id, sep = ''))
+  }
+  
   ###### build studymanageR-specific json file
   project_info <- list(
-    study_name = study_name,
-    root_dir = file.path(home_dir, study_name)
+    study_name = study_name, 
+    study_descrip = study_descrip,
+    study_abbrev = study_abbrev, 
+    home_dir = home_dir, 
+    root_dir = file.path(home_dir, study_name),
+    rstudio_project = rstudio_project,
+    git_repo = git_repo,
+    osf_project = osf_project,
+    osf_guid = ifelse(osf_project == TRUE, osf_proj$id, NA)
   )
   project_info <- jsonlite::toJSON(project_info)
   write(project_info, file.path(home_dir, study_name, paste(study_name, '_info.json', sep = '')))
   if (verbose == TRUE) {
     message(paste('saved project metadata: ', study_name, '/', study_name, '_info.json', ' ...', sep = ''))
   }
-  
-  ###### initialize git repository
-  usethis::use_git(message = 'initialize project')
-  
+    
   ###### final status message
   if (verbose == TRUE) {
     message('all done initializing project!')
